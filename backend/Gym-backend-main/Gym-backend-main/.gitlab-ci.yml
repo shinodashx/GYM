@@ -1,0 +1,78 @@
+# This file is a template, and might need editing before it works on your project.
+# You can copy and paste this template into a new `.gitlab-ci.yml` file.
+# You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
+#
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Go.gitlab-ci.yml
+
+
+
+stages:
+  - test
+  - build
+  - deploy
+
+# format:
+#   image: golang:latest
+#   stage: test
+#   tags:
+#     - shell
+#   script:
+#     # - go fmt $(go list ./... | grep -v /vendor/)
+#     # - go vet $(go list ./... | grep -v /vendor/)
+#     # - go test -race $(go list ./... | grep -v /vendor/)
+#     - go env -w GO111MODULE=on
+#     - go env -w GOPROXY=https://goproxy.cn,direct
+#     - go test -v
+
+compile:
+  image: golang:latest
+  stage: build
+  tags:
+    - shell
+  script:
+    # - mkdir -p mybinaries
+    # - go build -o mybinaries ./...
+    - go env -w GO111MODULE=on
+    - go env -w GOPROXY=https://goproxy.cn,direct
+    - make
+    - gf build main.go
+  artifacts:
+    paths:
+      - main
+    expire_in: 2 days
+
+deploy:
+  stage: deploy
+  tags:
+    - shell
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  script:
+    # - echo "Delete previous container"
+    # - if docker ps -a | grep -q gym-demo ; then
+    #     echo "Stopping and removing existing gym-demo container"
+    #     docker stop gym-demo
+    #     docker rm gym-demo
+    #   fi
+    # - if docker images | grep -q gym_kneethaimay/gym-demo ; then
+    #     echo "Deleting existing gym_kneethaimay/gym-demo image"
+    #     docker rmi gym_kneethaimay/gym-demo
+    #   fi
+    # - docker rmi gym_kneethaimay/gym-demo
+    - docker stop gym-demo
+    - docker rm gym-demo
+    - docker rmi gym_kneethaimay/gym-demo
+    - echo "Deployment Todo"
+    - go env -w GO111MODULE=on
+    - go env -w GOPROXY=https://goproxy.cn,direct
+    - make
+    - rm -rf temp
+    - cp manifest/config/config.prod.yaml manifest/config/config.yaml
+    - gf docker -tn gym-demo -tp gym_kneethaimay
+    - docker run -itd --name gym-demo -p "16800:8000" -e TZ=Asia/Shanghai -v /opt/gym-backend/receipts:/app/receipts -v /opt/gym-backend/uploads/:/app/uploads gym_kneethaimay/gym-demo
+    - echo "Done"
+  environment: production
+

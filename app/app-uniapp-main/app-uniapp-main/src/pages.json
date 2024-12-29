@@ -1,0 +1,288 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+		"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Gym-KTM"
+			}
+		},
+		{
+			"path": "pages/index/coach",
+			"style": {
+				"navigationBarTitleText": "Coach"
+			}
+		},
+		{			"path": "pages/index/course",
+			"style": {
+				"navigationBarTitleText": "Course"
+			}
+
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "Login"
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "Register"
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "Detail"
+			}
+		},
+		{
+			"path": "pages/welcome/welcome",
+			"style": {
+				"navigationBarTitleText": "Welcome"
+			}
+		},
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "Profile"
+			}
+		},
+		{
+			"path": "pages/detail/place",
+			"style": {
+				"navigationBarTitleText": "Place"
+			}
+		},
+		{
+			"path": "pages/profile/order",
+			"style": {
+				"navigationBarTitleText": "Order"
+			}
+		},
+		{
+			"path": "pages/payment/payment",
+			"style": {
+				"navigationBarTitleText": "Payment"
+			}
+		},
+		{
+			"path": "pages/facility/facility",
+			"style": {
+				"navigationBarTitleText": "Facility"
+			}
+		},
+		{
+			"path": "pages/order/detail",
+			"style": {
+				"navigationBarTitleText": "Order Detail"
+			}
+		},
+		{
+			"path": "pages/profile/setting",
+			"style": {
+				"navigationBarTitleText": "Setting"
+			}
+		},
+		{
+			"path": "pages/profile/wallet",
+			"style": {
+				"navigationBarTitleText": "Wallet"
+			}
+		},
+		{
+			"path": "pages/profile/settings",
+			"style": {
+				"navigationBarTitleText": "Settings"
+			}
+		},
+		{
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "Register"
+			}
+		},
+		{
+			"path": "pages/login/forget",
+			"style": {
+				"navigationBarTitleText": "Forget"
+			}
+		},
+		{
+			"path": "pages/schedule/schedule",
+			"style": {
+				"navigationBarTitleText": "Schedule"
+			}
+		},
+		{
+			"path": "pages/hot/hot",
+			"style": {
+				"navigationBarTitleText": "Hottest"
+			}
+		},
+		{
+			"path": "pages/index/soccer",
+			"style": {
+				"navigationBarTitleText": "Soccer"
+			}
+		}
+		,
+		{
+			"path": "pages/index/basketball",
+			"style": {
+				"navigationBarTitleText": "Basketball"
+			}
+		}
+		,
+		{
+			"path": "pages/index/badminton",
+			"style": {
+				"navigationBarTitleText": "Badminton"
+			}
+		},
+		{
+			"path": "pages/profile/unLoginProfile",
+			"style": {
+				"navigationBarTitleText": "Profile"
+			}
+		},
+		{
+			"path": "pages/index/courseVideo",
+			"style": {
+				"navigationBarTitleText": "course"
+			}
+		},
+		{
+			"path": "pages/order/rate",
+			"style": {
+				"navigationBarTitleText": "evaluate"
+			}
+		},
+		{
+			"path": "pages/profile/vip",
+			"style": {
+				"navigationBarTitleText": "VIP"
+			}
+		},
+		{
+			"path": "pages/profile/setemail",
+			"style": {
+				"navigationBarTitleText": "setemail"
+			}
+		},
+		{
+			"path": "pages/profile/setphone",
+			"style": {
+				"navigationBarTitleText": "setphone"
+			}
+		},
+		{
+			"path": "pages/profile/inpay",
+			"style": {
+				"navigationBarTitleText": "inpay"
+			}
+		},
+		{
+			"path": "pages/profile/unuse",
+			"style": {
+				"navigationBarTitleText": "Unuse"
+			}
+		},
+		{
+			"path": "pages/profile/used",
+			"style": {
+				"navigationBarTitleText": "Used"
+			}
+		},
+		{
+			"path": "pages/profile/changepassword",
+			"style": {
+				"navigationBarTitleText": "changepassword"
+			}
+		},
+		{
+			"path": "pages/profile/card",
+			"style": {
+				"navigationBarTitleText": "Card"
+			}
+		},
+		{
+			"path": "pages/shop/shop",
+			"style": {
+				"navigationBarTitleText": "Shop"
+			}
+		},
+		{
+			"path": "pages/shop-detail/detail",
+			"style": {
+				"navigationBarTitleText": "Shop"
+			}
+		},
+		{
+			"path": "pages/shop-detail/place",
+			"style": {
+				"navigationBarTitleText": "place"
+			}
+		},
+		{
+			"path": "pages/bot/bot",
+			"style": {
+				"navigationBarTitleText": "bot"
+			}
+			
+		},
+		{
+			"path": "pages/index/activity",
+			"style": {
+				"navigationBarTitleText": "Activity"
+			}
+
+		}
+
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#86d45f",
+		"backgroundColor": "#f3f3f3"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/home.svg",
+				"selectedIconPath": "static/home.svg"
+			},
+			{
+				"pagePath": "pages/facility/facility",
+				"iconPath": "static/Streamlineicons-Streamline-Ux-Free-Gym.svg",
+				"selectedIconPath": "static/Streamlineicons-Streamline-Ux-Free-Gym.svg"
+			},
+			{
+				"pagePath": "pages/hot/hot",
+				"iconPath": "static/hot.svg",
+				"selectedIconPath": "static/hot.svg"
+			},
+			{
+				"pagePath": "pages/schedule/schedule",
+				"iconPath": "static/schedule.svg",
+				"selectedIconPath": "static/schedule.svg"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"iconPath": "static/profile.svg",
+				"selectedIconPath": "static/profile.svg"
+			}
+		]
+	}
+}

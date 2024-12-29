@@ -1,0 +1,15 @@
+export { default as Facility } from './Facility';
+export { default as NotFound } from './NotFound';
+export { default as Home } from './Home';
+export { default as Places } from './Places';
+export { default as Membership } from './Membership';
+export { default as Payfor } from './Payfor';
+export { default as PayforRegular } from './PayforRegular';
+export { default as PayforSub } from './PayforSub';
+export { default as Evaluation } from './Evaluation';
+export { default as UpdateEvaluation } from './UpdateEvaluation';
+export { default as Courses } from './Courses';
+export { default as Cours } from './Cours';
+export { default as Activity } from './Activity';
+export { default as Active } from './Active';
+export { default as Bot } from './Bot';

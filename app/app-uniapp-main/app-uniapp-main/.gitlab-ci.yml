@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  tags:
+    - shell
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  script:
+    - echo "Delete previous container"
+    - docker stop gym-h5
+    - docker rm gym-h5
+    - docker rmi gym_kneethaimay/gym-h5
+    - echo "Deployment Todo"
+    - docker build . -t gym_kneethaimay/gym-h5
+    - docker run -itd -p 16801:8080 --name gym-h5 gym_kneethaimay/gym-h5
+    - echo "Done"
+  environment: production
